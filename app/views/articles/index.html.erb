@@ -11,7 +11,9 @@
     <tr>
       <th><%= article.title %></th>
       <th><%= article.text %></th>
-      <td><%= link_to 'Show', article_path(article) %></td>
+      <td><%= link_to '見る', article_path(article) %></td>
+      <td><%= link_to '直す', edit_article_path(article) %></td>
+      <td><%= link_to '消す', article_path(article), method: :delete, date: { confirm: '本当に消しますか?'} %></td>
     </tr>
     <% end %>
 </table>
