@@ -1,0 +1,17 @@
+<h1>タスク一覧</h1>
+<%= link_to 'タスク追加', new_article_path %>
+<table>
+  <tr>
+    <th>タスク</th>
+    <th>内容</th>
+    <th></th>
+  </tr>
+
+  <% @article.each do |article| %>
+    <tr>
+      <th><%= article.title %></th>
+      <th><%= article.text %></th>
+      <td><%= link_to 'Show', article_path(article) %></td>
+    </tr>
+    <% end %>
+</table>
