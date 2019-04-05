@@ -7,3 +7,6 @@
   <strong>内容:</strong>
   <%= @article.text %>
 </p>
+
+<%= link_to '戻る', articles_path %>
+| <%= link_to '直す', edit_article_path(@article) %>
