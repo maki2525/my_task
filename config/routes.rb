@@ -1,5 +1,5 @@
 Rails.application.routes.draw do
-  # get 'rooms/show'
+  get 'rooms/show'
   #
   # get 'welcome/index'
   #
