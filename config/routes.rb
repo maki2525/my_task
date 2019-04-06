@@ -1,7 +1,13 @@
 Rails.application.routes.draw do
-  get 'welcome/index'
-
+  # get 'rooms/show'
+  #
+  # get 'welcome/index'
+  #
   resources :articles
+  #
+  # root 'welcome#index'
+  root to: 'rooms#show'
 
-  root 'welcome#index'
+  mount ActionCable.server => '/cable'
+
 end

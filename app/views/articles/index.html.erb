@@ -1,19 +1,21 @@
-<h1>タスク一覧</h1>
-<%= link_to 'タスク追加', new_article_path %>
-<table>
-  <tr>
-    <th>タスク</th>
-    <th>内容</th>
-    <th></th>
-  </tr>
-
-  <% @article.each do |article| %>
+<div class="container">
+  <h1>タスク一覧</h1>
+  <%= link_to 'タスク追加', new_article_path %>
+  <table>
     <tr>
-      <th><%= article.title %></th>
-      <th><%= article.text %></th>
-      <td><%= link_to '見る', article_path(article) %></td>
-      <td><%= link_to '直す', edit_article_path(article) %></td>
-      <td><%= link_to '消す', article_path(article),method: :delete, data: { confirm: '本当に消しますか?' } %></td>
+      <th>タスク</th>
+      <th>内容</th>
+      <th></th>
     </tr>
-    <% end %>
-</table>
+
+    <% @article.each do |article| %>
+      <tr>
+        <th><%= article.title %></th>
+        <th><%= article.text %></th>
+        <td><%= link_to '見る', article_path(article) %></td>
+        <td><%= link_to '直す', edit_article_path(article) %></td>
+        <td><%= link_to '消す', article_path(article),method: :delete, data: { confirm: '本当に消しますか?' } %></td>
+      </tr>
+      <% end %>
+  </table>
+</div>
